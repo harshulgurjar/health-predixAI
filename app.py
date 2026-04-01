@@ -38,7 +38,7 @@ if (selected == 'Diabetes Prediction'):
     diab_diagnosis = ''
 
     if st.button('Diabetes Test result'):
-        diab_Prediction = diabities_model.predict([[pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFuncton,Age]])
+        diab_Prediction = diabities_model.predict([[Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFuncton,Age]])
 
         if(diab_Prediction[0]==1):
             diab_diagnosis = 'this person is diabitic'
