@@ -3,9 +3,9 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 
-diabities_model=pickle.load(open('E:\\ann classi project\disease-prediction\diabities_model.sav','rb'))
-heart_model=pickle.load(open('E:\\ann classi project\disease-prediction\heart_disease_model.sav','rb'))
-parkinson_model=pickle.load(open('E:\\ann classi project\disease-prediction\parkinsons_model.sav','rb'))
+diabities_model=pickle.load(open('diabities_model.sav','rb'))
+heart_model=pickle.load(open('heart_disease_model.sav','rb'))
+parkinson_model=pickle.load(open('parkinsons_model.sav','rb'))
 
 
 
