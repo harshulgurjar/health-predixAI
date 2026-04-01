@@ -38,7 +38,7 @@ if (selected == 'Diabetes Prediction'):
     diab_diagnosis = ''
 
     if st.button('Diabetes Test result'):
-        diab_Prediction = diabities_model.predict([pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFuncton,Age])
+        diab_Prediction = diabities_model.predict([[pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFuncton,Age]])
 
         if(diab_Prediction[0]==1):
             diab_diagnosis = 'this person is diabitic'
@@ -64,7 +64,7 @@ if(selected == 'Heart disease prediction'):
     heart_diagnosis=''
 
     if st.button('heart disease test result'):
-        heart_prediction=heart_model.predict([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal])
+        heart_prediction=heart_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])
 
         if(heart_prediction[0]==1):
             heart_diagnosis='this person has heart disease'
@@ -97,7 +97,7 @@ if(selected == 'Parkinsons Prediction'):
 
     parkinsons_diagnosis = ''
     if st.button('parkinson test diagnosis'):
-        parkinson_prediction=parkinson_model.predict([fo, fhi, flo, Jitter_percent, Jitter_Abs,RAP, PPQ, DDP,Shimmer, Shimmer_dB, APQ3, APQ5,APQ, DDA, NHR, HNR, RPDE, DFA, spread1, spread2, D2, PPE])
+        parkinson_prediction=parkinson_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs,RAP, PPQ, DDP,Shimmer, Shimmer_dB, APQ3, APQ5,APQ, DDA, NHR, HNR, RPDE, DFA, spread1, spread2, D2, PPE]])
         if(parkinson_prediction[0]==1):
             parkinsons_diagnosis='this person is diagnosed with parkinsons'
         else:
